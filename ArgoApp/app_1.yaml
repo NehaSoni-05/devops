@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tree-service-app
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: tree-test-argo
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: "https://github.com/NehaSoni-05/devops.git"
+    targetRevision: "master"
+    path: "tools/helm/tree"
+    helm:
+      valueFiles:
+        - values.yaml
+      values: |
+        global:
+          project: tree
+        serviceAccount:
+          create: true
+        decisioningAuthoring:
+          enabled: true
