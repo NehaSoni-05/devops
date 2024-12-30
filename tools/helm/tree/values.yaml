@@ -1,0 +1,16 @@
+# -----------------------------------------------
+# global configuration
+# -----------------------------------------------
+global:
+  project: tree
+# -----------------------------------------------
+# service-account
+# -----------------------------------------------
+serviceAccount:
+  create: false
+  name: ns-decisioning-service-account
+# -----------------------------------------------
+# Tree Authoring Service
+# -----------------------------------------------
+decisioningAuthoring:
+  enabled: false

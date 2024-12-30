@@ -1,0 +1,16 @@
+#
+# This material is the confidential, proprietary, unpublished property
+# of Fair Isaac Corporation.  Receipt or possession of this material
+# does not convey rights to divulge, reproduce, use, or allow others
+# to use it without the specific written authorization of Fair Isaac Corporation
+# and use must conform strictly to the license agreement.
+#
+# Copyright (c) 2024 Fair Isaac Corporation. All Rights Reserved.
+#
+
+apiVersion: v2
+name: tree
+description: tree capability chart
+type: application
+version: 0.1.0
+appVersion: "0.0.1"
