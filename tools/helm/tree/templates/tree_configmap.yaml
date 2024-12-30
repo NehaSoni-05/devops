@@ -1,5 +1,4 @@
 {{- if and .Values.decisioningAuthoring.enabled (eq .Values.global.project "tree") }}
-{{- $iamUrl := printf "%s" .Values.global.iam.url -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
