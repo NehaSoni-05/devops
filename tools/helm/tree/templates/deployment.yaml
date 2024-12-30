@@ -19,8 +19,8 @@ spec:
     spec:
       serviceAccountName: decisioning-service-account
       containers:
-        - image: alpine
-          name: alpine
+        - image: nginx
+          name: nginx
           resources: {}
           envFrom:
             - configMapRef:
