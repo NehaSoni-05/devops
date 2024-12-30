@@ -24,3 +24,4 @@ spec:
           envFrom:
             - configMapRef:
                 name: decisioning-configmap
+{{- end}}
