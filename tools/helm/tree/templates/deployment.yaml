@@ -1,0 +1,26 @@
+{{- if .Values.decisioningAuthoring.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Values.global.project }}-{{ .Values.decisioningAuthoring.name }}
+  name: {{ .Values.global.project }}-{{ .Values.decisioningAuthoring.name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.global.project}}-{{ .Values.decisioningAuthoring.name }}
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.global.project }}-{{ .Values.decisioningAuthoring.name }}
+    spec:
+      serviceAccountName: decisioning-service-account
+      containers:
+        - image: alpine
+          name: alpine
+          resources: {}
+          envFrom:
+            - configMapRef:
+                name: decisioning-configmap
