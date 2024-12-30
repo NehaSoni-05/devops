@@ -14,3 +14,4 @@ serviceAccount:
 # -----------------------------------------------
 decisioningAuthoring:
   enabled: false
+  name: authoring
